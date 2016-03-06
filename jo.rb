@@ -4,7 +4,7 @@ class Jo < Formula
   head "https://github.com/jpmens/jo.git"
 
   def install
-    system "make", "jo", "jo.1"
+    system "make", "jo"
 
     bin.install "jo"
     man1.install "jo.1"
