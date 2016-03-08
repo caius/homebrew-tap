@@ -8,8 +8,8 @@ class Jo < Formula
   head do
     url "https://github.com/jpmens/jo.git"
 
-    depends_on :autoconf => :build
-    depends_on :automake => :build
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
   end
 
   def install
