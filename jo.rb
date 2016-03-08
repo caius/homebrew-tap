@@ -2,8 +2,8 @@ class Jo < Formula
   desc "JSON output from a shell"
   homepage "https://github.com/jpmens/jo"
 
-  url "https://github.com/jpmens/jo/releases/download/v0.5/jo-0.5.tar.gz"
-  sha256 "b90a0116a18125c246da8df24bc7e645a2ab36e2a9f876e9eb3ef90fbf79cd65"
+  url "https://github.com/jpmens/jo/releases/download/v0.6/jo-0.6.tar.gz"
+  sha256 "09cc71a39fd9cfece8edd9a97bac186d585add1687050d23729cfe900aa2e59e"
 
   head do
     url "https://github.com/jpmens/jo.git"
