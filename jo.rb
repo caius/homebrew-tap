@@ -2,8 +2,8 @@ class Jo < Formula
   desc "JSON output from a shell"
   homepage "https://github.com/jpmens/jo"
 
-  url "https://github.com/jpmens/jo/releases/download/v0.9/jo-0.9.tar.gz"
-  sha256 "e757d17469e5c9682ebdd8c7a88b7231303bd0fca2a69ffedbcf24835eaa241f"
+  url "https://github.com/jpmens/jo/releases/download/v1.0/jo-1.0.tar.gz"
+  sha256 "d66ec97258d1afad15643fb2d5b5e807153a732ba45c2417adc66669acbde52e"
 
   head do
     url "https://github.com/jpmens/jo.git"
@@ -21,6 +21,6 @@ class Jo < Formula
   end
 
   test do
-    system "bin/jo", "success@true", "result=pass" == %({"success": true, "result": "pass"})
+    system "bin/jo", "success=true", "result=pass" == %({"success": true, "result": "pass"})
   end
 end
