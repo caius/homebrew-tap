@@ -1,21 +1,5 @@
-# caius/homebrew-jo
+# Deprecated!
 
-Homebrew tap for https://github.com/jpmens/jo
+Formula for `jo` was accepted upstream into Homebrew itself. This tap is no longer required! Just `brew install jo` and you're good to go.
 
-## Installation
 
-Setup the tap:
-
-    brew tap caius/jo
-
-Then install the stable release:
-
-    brew install jo
-
-Alternatively if you want to install the tip of the upstream git repository:
-
-    brew install --HEAD jo
-
-## Usage
-
-See README at https://github.com/jpmens/jo
