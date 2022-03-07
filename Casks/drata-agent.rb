@@ -7,5 +7,7 @@ cask "drata-agent" do
   desc "Drata Agent for compliance and security"
   homepage "https://drata.com"
 
+  auto_updates true
+
   app "Drata Agent.app"
 end
