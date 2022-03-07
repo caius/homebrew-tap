@@ -7,6 +7,11 @@ cask "drata-agent" do
   desc "Drata Agent for compliance and security"
   homepage "https://drata.com"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Drata Agent.app"
