@@ -8,7 +8,7 @@ class TerraformAT1011 < Formula
 
   livecheck do
     url "https://releases.hashicorp.com/terraform/"
-    regex(%r{href=.*?v?(\d+(?:\.\d+)+)/?["' >]}i)
+    regex(%r{href=.*?v?(1\.0(?:\.\d+))/?["' >]}i)
   end
 
   depends_on "go" => :build
