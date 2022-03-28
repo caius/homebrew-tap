@@ -1,0 +1,21 @@
+name: "Update Tap"
+
+on:
+  schedule:
+    # 0808 every day
+    - cron: "8 8 * * *"
+
+jobs:
+  update-tap:
+    runs-on: "macos-latest"
+    steps:
+      - name: "Checkout Repo"
+        uses: "actions/checkout@v2"
+      - name: "Bump Formula"
+        uses: "dawidd6/action-homebrew-bump-formula@v3"
+        continue-on-error: true
+        with:
+          force: false
+          livecheck: true
+          tap: "caius/tap"
+          token: "${{ secrets.TOKEN }}"
