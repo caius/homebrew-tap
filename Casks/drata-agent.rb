@@ -9,7 +9,6 @@ cask "drata-agent" do
 
   livecheck do
     url :url
-    strategy :github_latest
   end
 
   auto_updates true
