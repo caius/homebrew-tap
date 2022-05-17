@@ -4,8 +4,8 @@ cask "drata-agent" do
 
   url "https://github.com/drata/agent-releases/releases/download/v#{version}/Drata-Agent-#{version}-mac.zip", verified: "github.com/drata"
   name "drata-agent"
-  desc "Drata Agent for compliance and security"
-  homepage "https://drata.com"
+  desc "Drata compliance and security service macOS Agent"
+  homepage "https://drata.com/"
 
   livecheck do
     url :url
