@@ -6,7 +6,21 @@ on:
     - cron: "8 8 * * *"
 
 jobs:
-  update-tap:
+  update-casks:
+    runs-on: "macos-latest"
+    steps:
+      - name: "Checkout Repo"
+        uses: "actions/checkout@v2"
+      - name: "Bump Casks"
+        uses: "macauley/action-homebrew-bump-cask@v1"
+        continue-on-error: true
+        with:
+          force: false
+          livecheck: true
+          tap: "caius/tap"
+          token: "${{ secrets.TOKEN }}"
+
+  update-formula:
     runs-on: "macos-latest"
     steps:
       - name: "Checkout Repo"
