@@ -1,6 +1,9 @@
 name: "Update Tap"
 
 on:
+  push:
+    branches:
+      - "actions/**"
   schedule:
     # 0808 every day
     - cron: "8 8 * * *"
