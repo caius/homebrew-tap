@@ -12,7 +12,7 @@ class Pgmetrics < Formula
     url :url
   end
 
-  depends_on "go@1.17" => :build
+  depends_on "go" => :build
 
   def install
     system "go", "build",
