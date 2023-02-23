@@ -14,4 +14,11 @@ cask "drata-agent" do
   auto_updates true
 
   app "Drata Agent.app"
+
+  zap trash: [
+    "~/Library/Application Support/drata-agent/",
+    "~/Library/Logs/drata-agent/",
+    "~/Library/Preferences/com.drata.agent.plist",
+    "~/Library/Saved Application State/com.drata.agent.savedState/",
+  ]
 end
