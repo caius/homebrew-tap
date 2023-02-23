@@ -15,6 +15,10 @@ cask "drata-agent" do
 
   app "Drata Agent.app"
 
+  uninstall quit: %w[
+    com.drata.agent
+  ]
+
   zap trash: [
     "~/Library/Application Support/drata-agent/",
     "~/Library/Logs/drata-agent/",
