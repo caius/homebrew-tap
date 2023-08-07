@@ -1,0 +1,27 @@
+class S3Nuke < Formula
+  def name; "s3-nuke"; end
+
+  desc "Tool to nuke S3 buckets including versioned objects"
+  homepage "github.com/soapiestwaffles/s3-nuke"
+  url "https://github.com/soapiestwaffles/s3-nuke/archive/refs/tags/v1.1.3.tar.gz"
+  sha256 "c11ade14d36099ba82ffd9a949aa1237afb6ecf3b70855668233569efba5e683"
+  head "https://github.com/soapiestwaffles/s3-nuke", branch: "main"
+
+  depends_on "go" => :build
+
+  def install
+    ENV["CGO_ENABLED"] = "0"
+    ldflags = %W[
+      -s -w
+      -X main.version=#{version}
+      -X main.commit=99fdb7dfc7ce237368c07657c3b4e132cc2ee02b
+      -X main.date=#{Time.now.utc.iso8601}
+    ]
+
+    system "go", "build", *std_go_args(ldflags: ldflags)
+  end
+
+  test do
+    system "s3-nuke", "--version"
+  end
+end
