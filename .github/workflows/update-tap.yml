@@ -1,6 +1,7 @@
 name: "Update Tap"
 
 on:
+  workflow_dispatch: {}
   push:
     branches:
       - "actions/**"
