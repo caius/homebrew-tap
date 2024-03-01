@@ -1,6 +1,6 @@
 cask "drata-agent" do
-  version "3.5.0"
-  sha256 "27cfc6144424d53f6827177df91578771fa91a1816791b29e058af36733a5398"
+  version "3.6.0"
+  sha256 "dec211546289316271fa73d04759b0a688b93b563b3f06cd27f4680bcb5cc55e"
 
   url "https://github.com/drata/agent-releases/releases/download/v#{version}/Drata-Agent-mac.zip", verified: "github.com/drata/"
   name "drata-agent"
@@ -15,9 +15,7 @@ cask "drata-agent" do
 
   app "Drata Agent.app"
 
-  uninstall quit: %w[
-    com.drata.agent
-  ]
+  uninstall quit: com.drata.agent
 
   zap trash: [
     "~/Library/Application Support/drata-agent/",
