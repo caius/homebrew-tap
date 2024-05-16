@@ -1,7 +1,7 @@
 class Nomctx < Formula
-  sha256 "a899e16fc8324d46222ac641449e817008c26997cd6b78ba4ae8bd7ea190f165"
+  sha256 "da88c70d2d2efab6f5be3b311c4cb09c717292d2cb51f5a61151cd07a23a03f4"
 
-  url "https://github.com/mr-karan/nomctx/archive/v0.2.4.tar.gz"
+  url "https://github.com/mr-karan/nomctx/archive/v0.2.5.tar.gz"
   desc "Faster way to switch between clusters and namespaces in nomad"
   homepage "https://github.com/mr-karan/nomctx"
   license "MIT"
