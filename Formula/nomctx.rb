@@ -18,7 +18,7 @@ class Nomctx < Formula
     system "go", "build",
       *std_go_args,
       "-ldflags", "-s -w #{"-X main.buildString=#{version} " unless build.head?}",
-      "./cmd"
+      "./"
   end
 
   test do
