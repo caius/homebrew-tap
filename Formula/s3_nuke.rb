@@ -3,8 +3,8 @@ class S3Nuke < Formula
 
   desc "Tool to nuke S3 buckets including versioned objects"
   homepage "github.com/soapiestwaffles/s3-nuke"
-  url "https://github.com/soapiestwaffles/s3-nuke/archive/refs/tags/v1.1.4.tar.gz"
-  sha256 "2c35bfecb9aba312a8392484cc015ea70e3fdd40463d677af882535c42bd75dc"
+  url "https://github.com/soapiestwaffles/s3-nuke/archive/refs/tags/v1.1.5.tar.gz"
+  sha256 "603cad43d7fefdf9878b3a4cea83c6870f614fed195a420fccb12dbb0b3e52ba"
   head "https://github.com/soapiestwaffles/s3-nuke", branch: "main"
 
   depends_on "go" => :build
