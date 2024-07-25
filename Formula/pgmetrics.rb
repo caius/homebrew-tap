@@ -1,7 +1,7 @@
 class Pgmetrics < Formula
-  sha256 "59c9c32be979071bb029bf21e4cfe7c8fd81f5ff8c8967e7e67fe30f3c4aa23e"
+  sha256 "956d229d6e8c491f1b7524327a4e0f6104f060eb7da65cffe31cec96bc308eac"
 
-  url "https://github.com/rapidloop/pgmetrics/archive/v1.16.0.tar.gz"
+  url "https://github.com/rapidloop/pgmetrics/archive/v1.17.0.tar.gz"
   desc "Collects and displays various information and statistics from a running PostgreSQL server"
   homepage "https://pgmetrics.io/"
   license "apache-2.0"
