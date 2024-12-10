@@ -8,10 +8,6 @@ class Pgmetrics < Formula
 
   head "https://github.com/rapidloop/pgmetrics.git", branch: "master"
 
-  livecheck do
-    url :url
-  end
-
   depends_on "go" => :build
 
   def install
