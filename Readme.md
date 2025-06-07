@@ -13,13 +13,13 @@ brew tap caius/tap
 Then you can install any of the casks or formula by referring to them by name, eg
 
 ```sh
-brew install drata-agent
+brew install pgmetrics
 ```
 
 Alternatively you can do both in one, by including the tap name in the name of the cask or formula at install time:
 
 ```sh
-brew install caius/tap/drata-agent
+brew install caius/tap/pgmetrics
 ```
 
 ## Development
@@ -28,6 +28,11 @@ brew install caius/tap/drata-agent
 
 The workflow is configured to run at 0800 every day (UTC), but you can also trigger it for debugging purposes by pushing to a branch whose name starts `actions/`.
 
-## Previously known as `homebrew-jo`
+## Previous Formulae
 
-This repo used to be named `homebrew-jo`, but the formula for `jo` was accepted upstream into Homebrew itself. This tap is no longer required for `jo`! Just `brew install jo` and you're good to go.
+These used to live here, but no longer do.
+
+- `jo` - now available in homebrew-core
+- `drata-agent` - now available in homebrew-cask
+
+This repo also used to be named `homebrew-jo`, but got renamed after the formula for `jo` was accepted upstream into Homebrew itself.
