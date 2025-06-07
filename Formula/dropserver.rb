@@ -1,6 +1,6 @@
 class Dropserver < Formula
-  version "0.10.0"
-  sha256 "6c488022a9e42faa0a8ebe409fd34e51880eeb415bed7e8cf6e4de8ef5a2ed6c"
+  version "0.13.3"
+  sha256 "732e987ce6098a61e5c726823996db32bcc21134d2f94fc4450682072c568721"
 
   url "https://github.com/teleclimber/Dropserver/releases/download/v#{version}/ds-dev-amd64-darwin.tar.gz"
   desc "An application platform for your personal web services."
