@@ -1,8 +1,8 @@
 class Dropserver < Formula
-  version "0.13.3"
-  sha256 "732e987ce6098a61e5c726823996db32bcc21134d2f94fc4450682072c568721"
+  version "0.14.4"
+  sha256 "fcdeb56da86e82a53887998eaa09345096c82e790a92b10259a2c8b29e388642"
 
-  url "https://github.com/teleclimber/Dropserver/releases/download/v#{version}/ds-dev-amd64-darwin.tar.gz"
+  url "https://github.com/teleclimber/Dropserver/releases/download/v#{version}/ds-dev-MacOS-arm64.tar.gz"
   desc "An application platform for your personal web services."
   homepage "https://dropserver.org/"
   license "apache-2.0"
@@ -10,7 +10,8 @@ class Dropserver < Formula
   #head "https://github.com/teleclimber/Dropserver.git", branch: "master"
 
   livecheck do
-    url :url
+    url "https://github.com/teleclimber/Dropserver"
+    strategy :github_releases
   end
 
   def install
