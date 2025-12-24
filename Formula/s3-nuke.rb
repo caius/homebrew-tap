@@ -20,6 +20,6 @@ class S3Nuke < Formula
   end
 
   test do
-    system "s3-nuke", "--version"
+    system bin/"s3-nuke", "--version"
   end
 end
