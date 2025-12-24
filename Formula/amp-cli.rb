@@ -12,7 +12,7 @@ class AmpCli < Formula
   end
 
   def install
-    system "chmod", "+x", "amp-darwin-arm64"
+    chmod 0555, "amp-darwin-arm64"
     bin.install "amp-darwin-arm64" => "amp"
   end
 
