@@ -1,6 +1,4 @@
 class S3Nuke < Formula
-  def name; "s3-nuke"; end
-
   desc "Tool to nuke S3 buckets including versioned objects"
   homepage "github.com/soapiestwaffles/s3-nuke"
   url "https://github.com/soapiestwaffles/s3-nuke/archive/refs/tags/v1.1.5.tar.gz"
@@ -22,6 +20,6 @@ class S3Nuke < Formula
   end
 
   test do
-    system "s3-nuke", "--version"
+    system bin/"s3-nuke", "--version"
   end
 end

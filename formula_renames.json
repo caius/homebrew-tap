@@ -1,3 +1,4 @@
 {
-  "amp-code": "amp-cli"
+  "amp-code": "amp-cli",
+  "s3_nuke": "s3-nuke"
 }
