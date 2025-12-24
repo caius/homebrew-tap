@@ -30,8 +30,8 @@ jobs:
       - name: "Checkout Repo"
         uses: "actions/checkout@v2"
       - name: "Bump Formula"
-        uses: "dawidd6/action-homebrew-bump-formula@v3"
-        continue-on-error: true
+        uses: "dawidd6/action-homebrew-bump-formula@v7"
+        continue-on-error: false
         with:
           force: false
           livecheck: true
