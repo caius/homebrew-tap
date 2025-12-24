@@ -10,7 +10,8 @@ class Dropserver < Formula
   #head "https://github.com/teleclimber/Dropserver.git", branch: "master"
 
   livecheck do
-    url :url
+    url "https://github.com/teleclimber/Dropserver"
+    strategy :github_releases
   end
 
   def install
