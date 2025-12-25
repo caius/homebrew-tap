@@ -1,8 +1,9 @@
 class Si < Formula
   desc "System Initiative CLI tool for managing schemas, templates, and components"
   homepage "https://systeminit.com/"
-  url "https://github.com/systeminit/si/archive/refs/tags/v0.5.tar.gz"
-  sha256 "62524907ac6158eed83e4c5e035689f39a7f2a164d501592a434e40f5db4e311"
+  url "https://github.com/systeminit/si/archive/refs/tags/release/20251222.165513.0-sha.dac43962.tar.gz"
+  version "20251222.165513.0-sha.dac43962"
+  sha256 "456b01cd62e2b4b728cdc176ece932e2b9c5989cf86755d3ef1c5abb4d52da71"
   license "Apache-2.0"
 
   depends_on "deno" => :build
