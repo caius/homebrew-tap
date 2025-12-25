@@ -6,6 +6,12 @@ class Si < Formula
   sha256 "456b01cd62e2b4b728cdc176ece932e2b9c5989cf86755d3ef1c5abb4d52da71"
   license "Apache-2.0"
 
+  livecheck do
+    url "https://github.com/systeminit/si.git"
+    strategy :git
+    regex(%r{^release/(.+)$}i)
+  end
+
   depends_on "deno" => :build
 
   def install
