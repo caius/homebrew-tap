@@ -1,9 +1,9 @@
 class AmpCli < Formula
   desc "Frontier coding agent that lets you wield the full power of leading models"
   homepage "https://ampcode.com/"
-  url "https://storage.googleapis.com/amp-public-assets-prod-0/cli/0.0.1766664082-ga410bf/amp-darwin-arm64"
-  version "0.0.1766664082-ga410bf"
-  sha256 "a47333177053ed0439a81f5606aa79f71ff993f9ccd99a9176a133ed3174ad6c"
+  url "https://storage.googleapis.com/amp-public-assets-prod-0/cli/0.0.1766736084-gd834e3/amp-darwin-arm64"
+  version "0.0.1766736084-gd834e3"
+  sha256 "4f8b39c5c1aa07983c681ae33f4789264eca78b99ebb95b2caf988cab32a5d74"
 
   livecheck do
     url "https://storage.googleapis.com/amp-public-assets-prod-0/cli/cli-version.txt"
