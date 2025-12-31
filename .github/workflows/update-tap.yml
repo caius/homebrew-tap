@@ -9,31 +9,31 @@ on:
     # 0808 every day
     - cron: "8 8 * * *"
 
-jobs:
-  update-casks:
-    runs-on: "macos-latest"
-    steps:
-      - name: "Checkout Repo"
-        uses: "actions/checkout@v2"
-      - name: "Bump Casks"
-        uses: "macauley/action-homebrew-bump-cask@v1"
-        continue-on-error: true
-        with:
-          force: false
-          livecheck: true
-          tap: "caius/tap"
-          token: "${{ secrets.TOKEN }}"
+permissions:
+  contents: "write"
+  pull-requests: "write"
 
-  update-formula:
+jobs:
+  bump-packages:
     runs-on: "macos-latest"
     steps:
-      - name: "Checkout Repo"
-        uses: "actions/checkout@v2"
-      - name: "Bump Formula"
-        uses: "dawidd6/action-homebrew-bump-formula@v7"
-        continue-on-error: false
-        with:
-          force: false
-          livecheck: true
-          tap: "caius/tap"
-          token: "${{ secrets.TOKEN }}"
+      # macOS comes with Homebrew installed
+
+      - name: "Tap caius/tap"
+        run: "brew tap caius/tap"
+        shell: "bash"
+
+      # Doesn't work for a tap, annoyingly
+      # - name: "Bump casks/formulae"
+      #   uses: "Homebrew/actions/bump-packages@main"
+      #   with:
+      #     token: "${{ secrets.GITHUB_TOKEN }}"
+      #     fork: false
+
+      - name: "Bump casks/formulae"
+        run: |
+          brew bump --no-fork --open-pr --tap caius/tap
+        shell: "bash"
+        env:
+          HOMEBREW_DEVELOPER: "1"
+          HOMEBREW_GITHUB_API_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
