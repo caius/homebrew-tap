@@ -15,8 +15,10 @@ jobs:
         id: "set-up-homebrew"
         uses: "Homebrew/actions/setup-homebrew@main"
         with:
+          # Configures updating these taps
           core: true
           cask: false
+          # Also taps this repo and symlinks to $PWD/homebrew-tap
 
       - name: "Cache Homebrew Bundler RubyGems"
         id: "cache"
@@ -30,15 +32,11 @@ jobs:
         if: "steps.cache.outputs.cache-hit != 'true'"
         run: "brew install-bundler-gems"
 
-      - name: "Checkout"
-        uses: "actions/checkout@v4"
-
       - name: "Check brew style"
-        run: 'brew style --verbose "$PWD"'
+        run: 'brew style --verbose caius/tap'
         shell: "bash"
         env:
           HOMEBREW_DEVELOPER: "1"
-          HOMEBREW_NO_INSTALL_FROM_API: "1"
 
   # PITA to get working, leaving for posterity
   # audit:
