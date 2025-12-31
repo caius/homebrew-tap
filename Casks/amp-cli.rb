@@ -1,8 +1,9 @@
 cask "amp-cli" do
-  version "0.0.1767168080-g527af6"
-  sha256 "0cdbc834a587e1b9226c0a605de5d5133cc8f3eddc93e7c3d966eb305ec7fd5c"
+  version "0.0.1767182488-g6a81f9"
+  sha256 "eddb670142f422a036c4ff59bf31535b6ef58b124a15967b81b93fe6d1395c88"
 
-  url "https://storage.googleapis.com/amp-public-assets-prod-0/cli/#{version}/amp-darwin-arm64"
+  url "https://storage.googleapis.com/amp-public-assets-prod-0/cli/#{version}/amp-darwin-arm64",
+      verified: "storage.googleapis.com/amp-public-assets-prod-0/"
   name "Amp CLI"
   desc "Frontier coding agent that lets you wield the full power of leading models"
   homepage "https://ampcode.com/"
@@ -17,7 +18,7 @@ cask "amp-cli" do
   binary "amp-darwin-arm64", target: "amp"
 
   zap trash: [
-    "~/Library/Application\ Support/amp",
     "~/.config/amp",
+    "~/Library/Application Support/amp",
   ]
 end
