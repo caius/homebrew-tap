@@ -13,7 +13,7 @@ cask "immersed" do
 
   zap trash: [
     "~/Library/Application Support/Immersed",
+    "~/Library/Caches/team.Immersed",
     "~/Library/Preferences/team.Immersed.plist",
-    "~/Library/Caches/team.Immersed"
   ]
 end
