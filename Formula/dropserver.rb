@@ -1,13 +1,12 @@
 class Dropserver < Formula
+  desc "Application platform for your personal web services"
+  homepage "https://dropserver.org/"
+  url "https://github.com/teleclimber/Dropserver/releases/download/v#{version}/ds-dev-MacOS-arm64.tar.gz"
   version "0.14.4"
   sha256 "fcdeb56da86e82a53887998eaa09345096c82e790a92b10259a2c8b29e388642"
-
-  url "https://github.com/teleclimber/Dropserver/releases/download/v#{version}/ds-dev-MacOS-arm64.tar.gz"
-  desc "An application platform for your personal web services."
-  homepage "https://dropserver.org/"
   license "apache-2.0"
 
-  #head "https://github.com/teleclimber/Dropserver.git", branch: "master"
+  # head "https://github.com/teleclimber/Dropserver.git", branch: "master"
 
   livecheck do
     url "https://github.com/teleclimber/Dropserver"

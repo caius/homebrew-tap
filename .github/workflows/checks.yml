@@ -1,0 +1,65 @@
+name: "Checks"
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+
+jobs:
+  lint:
+    name: "Tap Lint"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Set up Homebrew"
+        id: "set-up-homebrew"
+        uses: "Homebrew/actions/setup-homebrew@main"
+        with:
+          # Configures updating these taps
+          core: true
+          cask: false
+          # Also taps this repo and symlinks to $PWD/homebrew-tap
+
+      - name: "Cache Homebrew Bundler RubyGems"
+        id: "cache"
+        uses: "actions/cache@v5"
+        with:
+          path: "${{ steps.set-up-homebrew.outputs.gems-path }}"
+          key: "${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}"
+          restore-keys: "${{ runner.os }}-rubygems-"
+
+      - name: "Install Homebrew Bundler RubyGems"
+        if: "steps.cache.outputs.cache-hit != 'true'"
+        run: "brew install-bundler-gems"
+
+      - name: "Check brew style"
+        run: 'brew style --verbose caius/tap'
+        shell: "bash"
+        env:
+          HOMEBREW_DEVELOPER: "1"
+
+  # PITA to get working, leaving for posterity
+  # audit:
+  #   requires: "style"
+  #   name: "brew audit"
+  #   runs-on: "macos-latest"
+  #   steps:
+  #     # macOS comes with Homebrew installed
+
+  #     - name: "Tap caius/tap from PR"
+  #       uses: "actions/checkout@v4"
+  #       with:
+  #         depth: 0
+
+  #     - name: "Move tap into place for brew"
+  #       run: |
+  #         set -o errexit
+  #         mkdir -p /opt/homebrew/Library/Taps/caius
+  #         cp -r $PWD /opt/homebrew/Library/Taps/caius/
+  #       shell: "bash"
+
+  #     - name: "Audit tap"
+  #       run: "brew audit --strict --online --display-filename --changed --tap caius/tap --verbose"
+  #       shell: "bash"
+  #       env:
+  #         HOMEBREW_DEVELOPER: "1"

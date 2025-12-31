@@ -1,7 +1,7 @@
 class TerraformAT1011 < Formula
   desc "Tool to build, change, and version infrastructure"
   homepage "https://www.terraform.io/"
-  url "https://github.com/hashicorp/terraform/archive/v1.0.11.tar.gz"
+  url "https://github.com/hashicorp/terraform/archive/refs/tags/v1.0.11.tar.gz"
   sha256 "c86040599f81202bb09b9f3fc637fdf4fe95cd9dbd6c3b41b366e2cdc5d908dc"
   license "MPL-2.0"
   head "https://github.com/hashicorp/terraform.git", branch: "main"
@@ -11,13 +11,13 @@ class TerraformAT1011 < Formula
     regex(%r{href=.*?v?(1\.0(?:\.\d+))/?["' >]}i)
   end
 
+  keg_only :versioned_formula
+
   depends_on "go" => :build
 
   on_linux do
     depends_on "gcc"
   end
-
-  conflicts_with "tfenv", because: "tfenv symlinks terraform binaries"
 
   # Needs libraries at runtime:
   # /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by node)
