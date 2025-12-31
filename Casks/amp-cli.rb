@@ -15,4 +15,9 @@ cask "amp-cli" do
   auto_updates true
 
   binary "amp-darwin-arm64", target: "amp"
+
+  zap trash: [
+    "~/Library/Application\ Support/amp",
+    "~/.config/amp",
+  ]
 end
