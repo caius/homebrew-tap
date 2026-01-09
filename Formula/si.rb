@@ -1,9 +1,9 @@
 class Si < Formula
   desc "System Initiative CLI tool for managing schemas, templates, and components"
   homepage "https://systeminit.com/"
-  url "https://github.com/systeminit/si/archive/refs/tags/release/20260108.014547.0-sha.2ed72fdc.tar.gz"
-  version "20260108.014547.0-sha.2ed72fdc"
-  sha256 "a34fdeffc05b213113c564c4a6cfa44269e037fe0c22895f0840d733c8b245a0"
+  url "https://github.com/systeminit/si/archive/refs/tags/release/20260109.005243.0-sha.58e90654.tar.gz"
+  version "20260109.005243.0-sha.58e90654"
+  sha256 "d9ea8bb649f60c7e44c1749083af92d3d31094077df2c04e7e2202992e204160"
   license "Apache-2.0"
 
   livecheck do
