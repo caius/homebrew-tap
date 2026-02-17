@@ -6,13 +6,13 @@ class Si < Formula
   sha256 "1962f3e6c0aab0da4f89e175a837ac9b1871d1ef83f2b7acd383b096548bb3a3"
   license "Apache-2.0"
 
-  deprecate! date: "2026-01-28", because: :deprecated_upstream
-
   livecheck do
     url "https://github.com/systeminit/si.git"
     strategy :git
     regex(%r{^release/(.+)$}i)
   end
+
+  deprecate! date: "2026-01-28", because: :deprecated_upstream
 
   depends_on "deno" => :build
 
