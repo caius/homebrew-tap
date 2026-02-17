@@ -17,7 +17,7 @@ cask "lolgato" do
   uninstall quit: "fi.zendit.Lolgato"
 
   zap trash: [
+    "~/Library/Caches/fi.zendit.Lolgato",
     "~/Library/Preferences/fi.zendit.Lolgato.plist",
-    "~/Library/Caches/fi.zendit.Lolgato"
   ]
 end
