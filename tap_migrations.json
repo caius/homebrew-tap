@@ -1,3 +1,4 @@
 {
-  "amp-cli": "amp-cli"
+  "amp-cli": "amp-cli",
+  "lolgato": "homebrew/cask"
 }
