@@ -19,7 +19,5 @@ cask "keyhole" do
 
   uninstall quit: "org.danielkennett.Keyhole"
 
-  zap trash: [
-    "~/Library/Preferences/org.danielkennett.Keyhole.plist",
-  ]
+  zap trash: "~/Library/Preferences/org.danielkennett.Keyhole.plist"
 end
