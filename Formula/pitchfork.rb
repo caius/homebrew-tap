@@ -1,8 +1,8 @@
 class Pitchfork < Formula
   desc "CLI for managing daemons with a focus on developer experience"
   homepage "https://pitchfork.jdx.dev"
-  url "https://github.com/jdx/pitchfork/archive/refs/tags/v2.8.0.tar.gz"
-  sha256 "178ddcb3220c87fce1b0407d1fcfb621ea108d79c1251b5baceb5b35abe23ead"
+  url "https://github.com/jdx/pitchfork/archive/refs/tags/v2.9.1.tar.gz"
+  sha256 "df65c6371e555aea04095e12fad8e1035c83d749a6e8ccdfa9c2eec7a6d9ca13"
   license "MIT"
 
   livecheck do
