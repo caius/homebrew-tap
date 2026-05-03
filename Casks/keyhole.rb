@@ -1,6 +1,8 @@
 cask "keyhole" do
-  version "1.1.1"
-  sha256 "2295179ab74cedb614545f5fbcf2bd250fa8985a4d9846e2bfdc8c7cdb31db86"
+  on_sequoia :or_newer do
+    version "1.1.1"
+    sha256 "2295179ab74cedb614545f5fbcf2bd250fa8985a4d9846e2bfdc8c7cdb31db86"
+  end
 
   url "https://github.com/iKenndac/Keyhole/releases/download/#{version}/Keyhole.zip",
       verified: "github.com/iKenndac/Keyhole/"
