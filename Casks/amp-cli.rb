@@ -1,6 +1,6 @@
 cask "amp-cli" do
-  version "0.0.1778143766-gf8b20a"
-  sha256 "bb141d072bdc537745c496aea24aeaf1d5953feee6039384315c379759fa4e25"
+  version "0.0.1778228828-g14902a"
+  sha256 "879500f7bf33f44fa1b668165f794c6cc494f5c2bd91e967c45a74f22ad09ccf"
 
   url "https://storage.googleapis.com/amp-public-assets-prod-0/cli/#{version}/amp-darwin-arm64",
       verified: "storage.googleapis.com/amp-public-assets-prod-0/"
