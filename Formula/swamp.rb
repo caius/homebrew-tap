@@ -1,7 +1,7 @@
 class Swamp < Formula
   desc "AI native automation CLI, built for agents"
   homepage "https://github.com/systeminit/swamp"
-  version "20260514.002928.0-sha.22785a65"
+  version "20260515.021657.0-sha.c8ad3032"
   license "AGPL-3.0-only"
 
   livecheck do
@@ -12,8 +12,8 @@ class Swamp < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/systeminit/swamp/releases/download/v20260514.002928.0-sha.22785a65/swamp-darwin-aarch64"
-      sha256 "e74fc050b2ab679bfc2b41d7e50ea216a9166b072eee0eb92c2487fac785221e"
+      url "https://github.com/systeminit/swamp/releases/download/v20260515.021657.0-sha.c8ad3032/swamp-darwin-aarch64"
+      sha256 "affb18a2bf47d4c49eb1e6ec1701701dbfd7f070a5e0bb506b5b9888b88544cb"
     end
 
     on_intel do
