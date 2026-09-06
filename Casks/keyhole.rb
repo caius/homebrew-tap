@@ -4,8 +4,7 @@ cask "keyhole" do
     sha256 "3396caeaf794f547ac4301236e5e956100f9992dd9d196db00ab284f30303744"
   end
 
-  url "https://github.com/iKenndac/Keyhole/releases/download/#{version}/Keyhole.zip",
-      verified: "github.com/iKenndac/Keyhole/"
+  url "https://github.com/iKenndac/Keyhole/releases/download/#{version}/Keyhole.zip"
   name "Keyhole"
   desc "Keep media key presses focused on your media player"
   homepage "https://ikennd.ac/keyhole/"
