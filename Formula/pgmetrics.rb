@@ -1,8 +1,8 @@
 class Pgmetrics < Formula
   desc "Collects/displays information/statistics from a running PostgreSQL server"
   homepage "https://pgmetrics.io/"
-  url "https://github.com/rapidloop/pgmetrics/archive/refs/tags/v1.19.0.tar.gz"
-  sha256 "5e8e2918700b0d0dba43fe14651ce27e39717094b5cb26691432db7a5919255d"
+  url "https://github.com/rapidloop/pgmetrics/archive/refs/tags/v1.19.1.tar.gz"
+  sha256 "36719647b928c2887a78686f8eca0f52830bd9ada8f2a691000df23f80439054"
   license "apache-2.0"
 
   head "https://github.com/rapidloop/pgmetrics.git", branch: "master"
