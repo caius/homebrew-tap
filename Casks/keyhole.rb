@@ -1,7 +1,7 @@
 cask "keyhole" do
   on_sequoia :or_newer do
-    version "1.2"
-    sha256 "3396caeaf794f547ac4301236e5e956100f9992dd9d196db00ab284f30303744"
+    version "1.2.1"
+    sha256 "914b4788f25b0705acee13519292ea8717b7d3d914188f6b270b11ec32bb5f7a"
   end
 
   url "https://github.com/iKenndac/Keyhole/releases/download/#{version}/Keyhole.zip"
@@ -15,6 +15,7 @@ cask "keyhole" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Keyhole.app"
 
