@@ -1,8 +1,8 @@
 class Tailsnitch < Formula
   desc "Security audit for your tailscale configuration"
   homepage "https://github.com/Adversis/tailsnitch"
-  url "https://github.com/Adversis/tailsnitch/archive/refs/tags/v1.5.tar.gz"
-  sha256 "a285d24a5084a3f6cbb2bc5aaf42c67f538db47fb7e150f1ac175b74c9fe1cbd"
+  url "https://github.com/Adversis/tailsnitch/archive/refs/tags/v1.7.tar.gz"
+  sha256 "292857298804842246b3eccc9843a32e30f30a8c359c201fdc6402fff46f6802"
   license "MIT"
 
   depends_on "go" => :build
