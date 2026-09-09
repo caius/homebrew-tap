@@ -19,8 +19,10 @@ jobs:
     steps:
       # macOS comes with Homebrew installed
 
-      - name: "Tap caius/tap"
-        run: "brew tap caius/tap"
+      - name: "Tap and trust caius/tap"
+        run: |
+          brew tap caius/tap
+          brew trust --tap caius/tap
         shell: "bash"
 
       # Doesn't work for a tap, annoyingly
