@@ -1,5 +1,6 @@
 {
   "amp-cli": "ampcode/tap/ampcode",
+  "amp@beta": "ampcode/tap/amp@beta",
   "lolgato": "homebrew/cask",
   "pitchfork": "homebrew/core"
 }
